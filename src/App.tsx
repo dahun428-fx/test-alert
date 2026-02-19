@@ -1,27 +1,4 @@
-// [지원자 구현 대상]
-//
-// 이 파일에서 구현해야 할 내용:
-// 1. useEffect 내에서 GET /api/v1/alerts/latest-result API를 호출하세요
-// 2. resultDate가 오늘로부터 14일 이내이고 isChecked가 false인 경우에만 팝업을 표시하세요
-// 3. 조건 충족 시 setAlertResult와 setShowModal(true)을 호출하세요
-
-import { useState, useEffect } from 'react'
-import { AlertModal } from './components/AlertModal'
-import type { AlertResult } from './components/AlertModal'
-
 function App() {
-  const [alertResult, setAlertResult] = useState<AlertResult | null>(null)
-  const [showModal, setShowModal] = useState(false)
-
-  useEffect(() => {
-    // TODO: GET /api/v1/alerts/latest-result 를 호출하세요
-    // 조건: resultDate가 오늘로부터 14일 이내이고 isChecked가 false일 때만
-    //       setAlertResult(data) 와 setShowModal(true) 를 호출하세요
-  }, [])
-
-  const handleDismiss = () => {
-    setShowModal(false)
-  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -56,11 +33,6 @@ function App() {
           </p>
         </div>
       </main>
-
-      {/* 조건 충족 시 AlertModal이 렌더링됩니다 */}
-      {showModal && alertResult && (
-        <AlertModal result={alertResult} onDismiss={handleDismiss} />
-      )}
     </div>
   )
 }
