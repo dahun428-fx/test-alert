@@ -1,0 +1,28 @@
+`docs/05-improvement-analysis.md`에 고도화 분석 문서를 저장했습니다. 핵심 내용을 요약하면:
+
+---
+
+### 고도화 포인트 요약
+
+**필수 (미구현 기능)**
+- `AlertModal.tsx` 컴포넌트 신규 생성
+- `App.tsx`에 API 호출 + 14일 만료 판단 + localStorage 로직
+- MSW `dismiss` 핸들러 미등록
+
+**높음 (코드 품질)**
+- TypeScript 인터페이스 정의 없음 (`any` 위험)
+- 에러 처리 / 로딩 상태 전무
+- 라우터 미설치 (CTA 이동 불가)
+- 비즈니스 로직을 커스텀 훅으로 분리 필요
+
+**중간 (DX / 테스트 / 접근성)**
+- 테스트 프레임워크 미설정 (vitest 권장)
+- Path Alias(`@/`) 미설정
+- Prettier / Pre-commit Hook 없음
+- `lang="en"` → `"ko"` 수정 필요
+- 모달 접근성 (focus trap, ARIA, ESC 닫기)
+
+**낮음 (추후 고려)**
+- 코드 스플리팅, localStorage 데이터 검증
+- MSW 시나리오 다양화 (에러, 딜레이, 빈 결과 등)
+- 외부 URL 이동 시 protocol 검증

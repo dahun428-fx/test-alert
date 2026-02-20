@@ -1,0 +1,25 @@
+{
+  "cli_version": "0.4.5",
+  "checkpoint_id": "36dc7770b4e1",
+  "session_id": "44c5d5ae-a745-408b-848d-0bd7675296a7",
+  "strategy": "auto-commit",
+  "created_at": "2026-02-20T01:52:47.428604Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    ".claude/settings.local.json",
+    "docs/05-improvement-analysis.md"
+  ],
+  "agent": "Claude Code",
+  "turn_id": "2403bbfe28e6",
+  "transcript_identifier_at_start": "4d302f62-500b-4d90-92cd-0bd65cf3a55f",
+  "checkpoint_transcript_start": 85,
+  "transcript_lines_at_start": 85,
+  "token_usage": {
+    "input_tokens": 11,
+    "cache_creation_tokens": 16964,
+    "cache_read_tokens": 426293,
+    "output_tokens": 5726,
+    "api_call_count": 9
+  }
+}
